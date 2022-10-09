@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+    <head>
+<title>Contact me</title>
+<link rel="stylesheet" href="contactme.css"/>
+    </head>
+    <body>
+        <ul class="a">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About me</a></li>
+            <li><a href="others.html">Others</a></li>
+            <li><a href="contactme.html">Contact me</a></li>
+        </ul>
+
+<h1>Say Hello</h1>
+<p>Send me a massage</p>
+<script>
+document.getElementById("userform").addEventListener("submit",function(e){
+    e.preventDefault();
+    let name = document.getElementById("name").value;
+    let email = document.getElementById("email").value;
+    let massage = document.getElementById("Massage").value;
+    set(ref(db, 'users/' + userId), {
+    name: name,
+    email: email,
+    massage:massage,
+});
+});
+function myFunction(){
+    document.getElementById("demo").innerHTML ="0756754690";
+}
+function myFunction2(){
+    alert(" This is my Email-ashini@gmail.com");
+}
+
+  </script>
+
+  <form class="box" method="post" id="userform">
+    <span>Name:</span><input type="text" id="name"></input>&nbsp&nbsp&nbsp&nbsp&nbsp
+    <span>Email:</span><input type="text" id="email"></input><br><br>
+    <span>Massage:</span><Textarea Name="massage" colo="80" rows="4" id="massage"></Textarea><br><br>
+    <input type="submit" value="submit">
+  </form>
+<table>
+    <tr>
+ <td> <img src="call.jfif" width="100px" height="100px"></td>
+<td> <img src="gmail.jpg" width="100px" height="100px"></td>
+</tr>
+</table>
+  <p>You can contact me through whtsapp and email by</p>
+  <button onclick="myFunction()">Click and Get number</button>
+  <p id="demo"></p>
+
+  <button onclick="myFunction2()"> Click and Get my Email</button><br><br><br><br><br>
+
+  <footer>
+    Copyright © Ashini 2022. All rights reserved.
+  </footer>
+
+</body>
+
+</html>
